@@ -1,8 +1,8 @@
 {
-  "name": "edu",
-  "description": "?",
-  "repository": "https://github.com/interstellarnetwork/interstellar",
+  "name": "hydrox",
+  "description": "⚗️ HYDROX - Where Chemistry Meets Connectivity",
+  "repository": "https://github.com/Dragonjr123/Hydrox",
   "logo": "https://avatars.githubusercontent.com/u/103917385",
-  "keywords": ["school", "math"],
+  "keywords": ["chemistry", "proxy", "hydrox"],
   "image": "heroku/nodejs"
 }

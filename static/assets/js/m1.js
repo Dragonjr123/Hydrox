@@ -13,7 +13,7 @@ try {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Blocked Hostnames Check
-  const blockedHostnames = ["gointerstellar.app"];
+  const blockedHostnames = ["hydrox.app"];
 
   if (!blockedHostnames.includes(window.location.hostname)) {
     const script = document.createElement("script");
