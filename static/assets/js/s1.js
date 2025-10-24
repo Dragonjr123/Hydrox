@@ -312,7 +312,7 @@ function EngineChange(dropdown) {
   const engineUrls = {
     Google: "https://www.google.com/search?q=",
     Bing: "https://www.bing.com/search?q=",
-    DuckDuckGo: "https://duckduckgo.com/?q=",
+    Brave: "https://search.brave.com/search?q=",
     Qwant: "https://www.qwant.com/?q=",
     Startpage: "https://www.startpage.com/search?q=",
     SearchEncrypt: "https://www.searchencrypt.com/search/?q=",
