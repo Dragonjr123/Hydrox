@@ -1,5 +1,11 @@
 // tabs.js
 window.addEventListener("load", () => {
+  // Check if user is banned on page load
+  if (typeof checkBanStatus !== 'undefined' && checkBanStatus()) {
+    window.location.href = '/blocked';
+    return;
+  }
+  
   navigator.serviceWorker.register("../sw.js?v=2025-04-15", { scope: "/a/" });
   const form = document.getElementById("fv");
   const input = document.getElementById("input");
@@ -12,6 +18,15 @@ window.addEventListener("load", () => {
     });
   }
   function processUrl(url) {
+    // Check if URL should be blocked
+    if (typeof shouldBlockUrl !== 'undefined') {
+      const blockResult = shouldBlockUrl(url);
+      if (blockResult.blocked) {
+        window.location.href = '/blocked';
+        return;
+      }
+    }
+    
     sessionStorage.setItem("GoUrl", __uv$config.encodeUrl(url));
     const iframeContainer = document.getElementById("frame-container");
     const activeIframe = Array.from(iframeContainer.querySelectorAll("iframe")).find(iframe => iframe.classList.contains("active"));
